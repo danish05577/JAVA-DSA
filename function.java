@@ -30,6 +30,27 @@ public class function {
     }
 
 
+
+//FUNCTION OVERLOADING for sum 
+    public static int sum(int a , int b){
+        return a+b;
+    }
+    public static int sum(int a , int b , int c) {
+        return a+b+c;
+    }
+
+    public static boolean prime(int p) {
+        boolean isprime = true;
+        for (int i = 2 ; i<= Math.sqrt(p) ; i++) {
+            if (p%i == 0 && i!=p) {
+                isprime = false;
+                break;
+            }
+        }
+        return isprime;
+    }
+
+
     public static void main(String arg[]) {
         Scanner sc = new Scanner(System.in);
         // int a = sc.nextInt();
@@ -54,5 +75,10 @@ public class function {
         // System.out.println(bc);
         // System.out.println(binomial(sc.nextInt(),sc.nextInt()));               //I actually really did better.. LOL
         
+
+        // System.out.println(sum(5,3));
+        // System.out.println(sum(5,2,1));
+
+        System.out.println(prime(2));
     }
 }
