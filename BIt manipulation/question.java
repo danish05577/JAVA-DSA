@@ -49,6 +49,14 @@ public class question {
         System.out.println( result | bitmask);
         
     }
+
+    // Clear i bits
+    public static void clear(int n, int i) {
+        int bitmask = -1 << i;
+        int result = bitmask & n;
+        System.out.println(result);
+
+    }
     public static void main(String arg[]) {
         Scanner sc = new Scanner(System.in) ;
         int n = sc.nextInt();
@@ -57,6 +65,7 @@ public class question {
         // checkOddEven(n);
         // setithbit(n, i);
         // clearithbit(n, i);
-        updateithbit(n, i, newbit);
+        // updateithbit(n, i, newbit);
+        clear(n, i);
     }
 }
